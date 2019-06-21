@@ -71,7 +71,7 @@ csv2textable(pathToFile, caption, label, aformat)
 pathToFile = "csv/schnittpunkt.csv"
 caption    = "Daten der Messung zur Verifizierung der Linsengleichung."
 label      = "schnittpunkt"
-aformat    = "S[table-format=2.1] S[table-format=2.1] S[table-format=1.1]"
+aformat    = "S[table-format=2.1] S[table-format=2.1] S[table-format=1.1] S[table-format=1.1] S[table-format=1.1] S[table-format=2.1] S[table-format=1.1]"
 
 csv2textable(pathToFile, caption, label, aformat)
 

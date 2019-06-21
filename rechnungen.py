@@ -52,6 +52,7 @@ for i in range(0, 10):
     v[i] = b[i] / g[i]
 
 
+print("V:")
 print(V)
 print(v)
 print("----------------------------------------")
@@ -62,5 +63,23 @@ for i in range(0, 10):
 
 avg_diff = average(diff)
 
+print("Diff V:")
 print(diff)
 print(avg_diff)
+print("----------------------------------------")
+
+
+f = np.zeros(10)
+
+for i in range(0, 10):
+    f[i] = (1/b[i]) + (1/g[i])
+    f[i] = (1/f[i])
+
+
+f_avg = average(f)
+
+
+print("f:")
+print(f)
+print(f_avg)
+print("----------------------------------------")

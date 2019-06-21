@@ -11,10 +11,14 @@ def csv_read(pathToFile, delimiter=";"):
 
 #Gegenstandsgröße = 3cm
 
+def func(x, a, b):
+    return a*x + b
+
 n=10
 werte = csv_read("csv/schnittpunkt.csv")
-xdata = np.zeros(n)
-ydata = np.zeros(n)
+a = np.zeros(n)
+b = np.zeros(n)
+x = np.zeros(n)
 
 ignore = True
 i=0
@@ -22,19 +26,17 @@ for values in werte:
     if(ignore):
         ignore = False
     else:
-        xdata[i] = float(values[0])
-        ydata[i] = float(values[1])
+        b[i] = float(values[1])
+        a[i] = - b[i] / float(values[0])
+        x[i] = float(values[0])
         i+=1
 
-plt_arr = np.array([0,0])
-plt_arr2 = np.array([0,0])
-
+plt.figure(1)
 plt.grid(True)
 
 for i in range(0, n):
-    plt_arr[0] = xdata[i]
-    plt_arr2[1] = ydata[i]
-    plt.plot(plt_arr, plt_arr2, "r-", linewidth=0.5)
+    xdata=np.linspace(0, x[i])
+    plt.plot(xdata, func(xdata, a[i], b[i]), "r-", linewidth=0.5)
 
 
 plt.xlabel(r"$g$ / cm")
@@ -42,3 +44,18 @@ plt.ylabel(r"$b$ / cm")
 #plt.legend()
 plt.tight_layout()
 plt.savefig("build/plot_schnittpunkt.pdf")
+
+plt.figure(2)
+
+plt.grid(True)
+
+for i in range(0, n):
+    xdata=np.linspace(5, 15)
+    plt.plot(xdata, func(xdata, a[i], b[i]), "r-", linewidth=0.5)
+
+
+plt.xlabel(r"$g$ / cm")
+plt.ylabel(r"$b$ / cm")
+#plt.legend()
+plt.tight_layout()
+plt.savefig("build/plot_schnittpunkt_zoom.pdf")

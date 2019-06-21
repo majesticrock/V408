@@ -3,4 +3,38 @@
 
 Zunächst werden die Linsengleichung GLEICHUNG und das Abbildungsgesetz GLEICHUNG verifiziert.
 Die hierzu verwendeten Daten sind in \autoref{tab:schnittpunkt} zu finden.
-Dabei ist $V_1 = \frac{B}{G}$ und $V_2 = \frac{b}{g}$ 
+Dabei ist $V_1 = \frac{B}{G}$ und $V_2 = \frac{b}{g}$.
+
+\input{../content/schnittpunkt.tex}
+
+Der mittlere Abweichung der Differenzen von $V_1$ und $V_2$ ergibt sich zu
+
+\begin{center}
+    $\overline{\Delta V} = \frac{1}{N} \sum^N_{i=1} \frac{| V_{1,i} - V_{2,i} |}{V_{1,i}} = (4,8 \pm 0,4) \, \%$.
+\end{center}
+
+Die Brennweite der Linse kann einerseits bestimmt werden, in dem die Werte aus \autoref{tab:schnittpunkt} gemittelt werden.
+Andererseits können die $b_i$ auf die $y$-Achse und die $g_i$ auf die $x$-Achse gelegt werden. Anschließend werden die jeweiligen Wertepaare mit einer Gerade verbunden.
+Der Schnittpunkt dieser entspricht dann der Brennweite.
+Der so entstehende Plot ist in \autoref{fig:schnittpunkt} und \autoref{fig:schnittpunkt-zoom} zu sehen.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.95\textwidth]{build/plot_schnittpunkt.pdf}
+  \caption{Plot der Messwerte von $g$ und $b$ jeweils auf den Achsen, wobei die einzelnen Wertepaare miteinander verbunden sind.}
+  \label{fig:schnittpunkt}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.95\textwidth]{build/plot_schnittpunkt_zoom.pdf}
+  \caption{\autoref{fig:schnittpunkt} in einem kleineren Ausschnitt zum besseren Ablesen des Schnittpunktes der Geraden.}
+  \label{fig:schnittpunkt-zoom}
+\end{figure}
+
+Damit ergibt sich für die Brennweite
+
+\begin{align*}
+    f_text{Mittel} &= (9,854 \pm 0,009) \, \symup{cm}\\
+    f_\text{Plot} &= 10 \, \symup{cm}.
+\end{align*}
