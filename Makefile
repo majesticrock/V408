@@ -1,11 +1,18 @@
 all: build/main.pdf
 
 # hier Python-Skripte:
-#build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-#	TEXINPUTS=$$(pwd): python plot.py
+build/plot_schnittpunkt.pdf: plot-schnittpunkt.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python plot-schnittpunkt.py
+
+build/plot_abbe_g.pdf: plot-abbe-g.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python plot-abbe-g.py
+
+build/plot_abbe_b.pdf: plot-abbe-b.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python plot-abbe-b.py
+
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf:
+build/main.pdf: build/plot_schnittpunkt.pdf build/plot_abbe_b.pdf build/plot_abbe_g.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
