@@ -36,7 +36,7 @@ plt.grid(True)
 
 for i in range(0, n):
     xdata=np.linspace(0, x[i])
-    plt.plot(xdata, func(xdata, a[i], b[i]), "r-", linewidth=0.5)
+    plt.plot(xdata, func(xdata, a[i], b[i]), "r-", linewidth=0.4)
 
 
 plt.xlabel(r"$g$ / cm")
@@ -50,8 +50,8 @@ plt.figure(2)
 plt.grid(True)
 
 for i in range(0, n):
-    xdata=np.linspace(5, 15)
-    plt.plot(xdata, func(xdata, a[i], b[i]), "r-", linewidth=0.5)
+    xdata=np.linspace(7, 13)
+    plt.plot(xdata, func(xdata, a[i], b[i]), "r-", linewidth=0.4)
 
 
 plt.xlabel(r"$g$ / cm")

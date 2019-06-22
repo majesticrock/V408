@@ -79,7 +79,7 @@ csv2textable(pathToFile, caption, label, aformat)
 pathToFile = "csv/bessel.csv"
 caption    = "Daten der Messung zur Bestimmung der Brennweite einer Linse nach Bessel bei weißem Licht."
 label      = "bessel"
-aformat    = "S[table-format=2.0] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1]"
+aformat    = "S[table-format=2.0] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=1.1]"
 
 csv2textable(pathToFile, caption, label, aformat)
 

@@ -83,3 +83,47 @@ print("f:")
 print(f)
 print(f_avg)
 print("----------------------------------------")
+
+#Bessel
+
+con = csv_read("csv/bessel.csv")
+e  = np.zeros(10) 
+g1 = np.zeros(10)
+b1 = np.zeros(10)
+g2 = np.zeros(10)
+b2 = np.zeros(10)
+
+ignore = True
+i=0
+
+for val in con:
+    if(ignore):
+        ignore=False
+    else:
+        e[i]  = float(val[0])
+        g1[i] = float(val[1])
+        b1[i] = float(val[2])
+        g2[i] = float(val[3])
+        b2[i] = float(val[4])
+        i+=1
+
+mittel_1 = np.zeros(10)
+mittel_2 = np.zeros(10)
+d=np.zeros(10)
+f=np.zeros(10)
+
+
+for i in range(0,10):
+    mittel_1[i] = 0.5 * ( g2[i] + b1[i] )
+    mittel_2[i] = 0.5 * ( g1[i] + b2[i] )
+    d[i] = mittel_1[i] - mittel_2[i]
+    f[i] = ( e[i]**2 - (mittel_1[i] - mittel_2[i])**2) / (4*e[i])
+
+f_avg = average(f)
+
+print("g/b mittel:")
+print(d)
+print(f)
+print(f_avg)
+print("----------------------------------------")
+

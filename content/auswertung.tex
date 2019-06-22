@@ -1,6 +1,9 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\subsection{Verifizierung der Linsengleichung und des Abbildungsgesetzes}
+
+%TODO: Gleichung
 Zunächst werden die Linsengleichung GLEICHUNG und das Abbildungsgesetz GLEICHUNG verifiziert.
 Die hierzu verwendeten Daten sind in \autoref{tab:schnittpunkt} zu finden.
 Dabei ist $V_1 = \frac{B}{G}$ und $V_2 = \frac{b}{g}$.
@@ -35,6 +38,23 @@ Der so entstehende Plot ist in \autoref{fig:schnittpunkt} und \autoref{fig:schni
 Damit ergibt sich für die Brennweite
 
 \begin{align*}
-    f_text{Mittel} &= (9,854 \pm 0,009) \, \symup{cm}\\
-    f_\text{Plot} &= 10 \, \symup{cm}.
+    f_\text{Mittel} &= (9,854 \pm 0,009) \, \symup{cm}\\
+    f_\text{Plot} &= (10 \pm 1) \, \symup{cm}.
 \end{align*}
+
+
+
+\subsection{Bestimmung der Brennweite einer Linse nach der Methode von Bessel}
+
+%TODO: Gleichung
+Zur Bestimmung der Brennweite nach Bessel werden die Daten in \autoref{tab:bessel} verwendet.
+Die Brennweiten $f_i$, welche zusätzlich zu den Messwerten in der Tabelle befinden, berechnen sich dabei nach GLEICHUNG.
+Zur Berechnung von $d$ wird der Mittelwert aus $b_1$ und $g_2$ beziehungsweise jener aus $b_2$ und $g_1$ verwendet.
+
+\input{../content/bessel.tex}
+
+Aus diesen Werten wird der Mittelwert gebildet, um einen Wert für $f$ zu erhalten:
+
+\begin{center}
+  $f = (9,815 \pm 0,008) \, \symup{cm}$.
+\end{center}
