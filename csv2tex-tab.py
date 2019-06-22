@@ -61,17 +61,17 @@ def csv2textable(pathToFile, caption, label, format, delimiter=";"):
         f.write(fileEnd)
 
 pathToFile = "csv/abbe.csv"
-caption    = "Daten der Messung zur Bestimmung der Brennweite eines Linsensystems nach Abbe."
+caption    = "Daten der Messung zur Bestimmung der Brennweite und der Hauptebenen eines Linsensystems nach Abbe."
 label      = "abbe"
-aformat    = "S[table-format=3.1] S[table-format=2.1] S[table-format=2.1] S[table-format=1.1]"
+aformat    = "S[table-format=3.1] S[table-format=2.1] S[table-format=2.1] S[table-format=1.1] S[table-format=1.1]"
 
 csv2textable(pathToFile, caption, label, aformat)
 
 
 pathToFile = "csv/schnittpunkt.csv"
-caption    = "Daten der Messung zur Verifizierung der Linsengleichung."
+caption    = "Daten der Messung zur Vschnittpunkt-zoomerifizierung der Linsengleichung."
 label      = "schnittpunkt"
-aformat    = "S[table-format=2.1] S[table-format=2.1] S[table-format=1.1] S[table-format=1.1] S[table-format=1.1] S[table-format=2.1] S[table-format=1.1]"
+aformat    = "S[table-format=2.1] S[table-format=2.1] S[table-format=1.1] S[table-format=1.1] S[table-format=1.1] S[table-format=2.1] S[table-format=1.2]"
 
 csv2textable(pathToFile, caption, label, aformat)
 
@@ -79,20 +79,20 @@ csv2textable(pathToFile, caption, label, aformat)
 pathToFile = "csv/bessel.csv"
 caption    = "Daten der Messung zur Bestimmung der Brennweite einer Linse nach Bessel bei weißem Licht."
 label      = "bessel"
-aformat    = "S[table-format=2.0] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=1.1]"
+aformat    = "S[table-format=2.0] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=1.2]"
 
 csv2textable(pathToFile, caption, label, aformat)
 
 pathToFile = "csv/bessel-rot.csv"
 caption    = "Daten der Messung zur Bestimmung der Brennweite einer Linse nach Bessel bei rotem Licht."
 label      = "bessel-rot"
-aformat    = "S[table-format=2.0] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1]"
+aformat    = "S[table-format=2.0] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1]  S[table-format=2.1] S[table-format=1.2]"
 
 csv2textable(pathToFile, caption, label, aformat)
 
 pathToFile = "csv/bessel-blau.csv"
 caption    = "Daten der Messung zur Bestimmung der Brennweite einer Linse nach Bessel bei blauem Licht."
 label      = "bessel-blau"
-aformat    = "S[table-format=2.0] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1]"
+aformat    = "S[table-format=2.0] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1]  S[table-format=2.1] S[table-format=2.2]"
 
 csv2textable(pathToFile, caption, label, aformat)

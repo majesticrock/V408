@@ -42,7 +42,11 @@ Damit ergibt sich für die Brennweite
     f_\text{Plot} &= (10 \pm 1) \, \symup{cm}.
 \end{align*}
 
+Die Standardabweichung des Mittelwertes berechnet sich dabei nach
 
+\begin{equation}
+  \Delta f_\text{Mittel} = \sqrt{ \frac{1}{N(N-1)} \sum^N_{i=1} (f_i - f_\text{Mittel})^2 }.
+\end{equation}
 
 \subsection{Bestimmung der Brennweite einer Linse nach der Methode von Bessel}
 
@@ -58,3 +62,58 @@ Aus diesen Werten wird der Mittelwert gebildet, um einen Wert für $f$ zu erhalt
 \begin{center}
   $f = (9,815 \pm 0,008) \, \symup{cm}$.
 \end{center}
+
+Zur Bestimmung der chromatischen Abberation werden die Messdaten mit vorgesetztem Farbfilter betrachtet.
+Diese finden sich in \autoref{tab:bessel-rot} und \autoref{tab:bessel-blau}.
+
+\input{../content/bessel-rot.tex}
+
+\input{../content/bessel-blau.tex}
+
+Gemittelt ergeben sich die Brennweiten als
+
+\begin{align*}
+  f_\text{Rot} &=  (9,913 \pm 0,009) \, \symup{cm}\\
+  f_\text{Blau} &= (9,943 \pm 0,005) \, \symup{cm}.
+\end{align*}
+
+
+
+\subsection{Bestimmung der Brennweite und der Hauptebenen eines Linsensystems nach Abbe}
+
+\input{../content/abbe.tex}
+
+Zur Bestimmung der Position der Hauptebenen $H$ und $H'$ sowie der Brennweite des Linsensystems werden die Daten in \autoref{tab:abbe} genutzt.
+In zwei Plots werden jeweils die Daten $g'$ gegen $1 + \frac{1}{V}$ beziehungsweise $b'$ gegen $1 + V$ aufgetragen.
+Durch die Daten werden entsprechend Ausgleichsgeraden der Form
+
+\begin{align}
+  g' = f \cdot (1 + \frac{1}{V}) + h\\
+  b' = f \cdot (1 + V) + h'
+\end{align}
+
+gelegt. Dabei sind $h$ und $h'$ die Verschiebungen der Hauptebenen $H$ beziehungsweise $H'$ von dem gewählten Referenzpunkt $A$.
+Die entsprechenden Plots sind in \autoref{fig:fig:abbe-b} uund \autoref{fig:abbe-b} zu finden.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.95\textwidth]{build/plot_abbe_b.pdf}
+  \caption{Plot und Fit der Messwerte zur Bestimmung der Brennweite und der Hauptebene $H'$.}
+  \label{fig:abbe-b}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.95\textwidth]{build/plot_abbe_g.pdf}
+  \caption{Plot und Fit der Messwerte zur Bestimmung der Brennweite und der Hauptebene $H$.}
+  \label{fig:abbe-g}
+\end{figure}
+
+Mittels des Python 3.7.0 Paketes Curve Fit werden die Koeffizienten wie folgt bestimmt:
+
+\begin{align*}
+  f_\text{g} &= (14,6 \pm 0,2) \, \symup{cm}\\
+  f_\text{b} &= (21,7 \pm 0,5) \, \symup{cm}\\
+  h  &= (-1,7 \pm 0,4) \, \symup{cm}\\
+  h' &= (7 \pm 1) \, \symup{cm}
+\end{align*}

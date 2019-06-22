@@ -22,7 +22,7 @@ for values in werte:
         ignore = False
     else:
         ydata[i] = float(values[1])
-        xdata[i] = 1 + ((1 / float(values[3])) / 3)
+        xdata[i] = 1 + (1 /( float(values[3]) / 3))
         
         i+=1
 
@@ -35,9 +35,6 @@ plt.ylabel(r"$g$ / cm")
 
 print(popt1)
 print(np.sqrt(np.diag(pcov1)))
-
-#a = (131 \pm 2) \, \symup{cm}
-#b = (-118 \pm 2) \, \symup{cm}
 
 plt.legend()
 plt.tight_layout()
