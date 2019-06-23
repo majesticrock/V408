@@ -211,3 +211,9 @@ print(d)
 print(f)
 print(f_avg)
 print("----------------------------------------")
+
+print("Abbe:")
+f1=14.6
+f2=21.7
+
+print(average([f1, f2]))

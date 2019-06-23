@@ -45,6 +45,7 @@ Damit ergibt sich für die Brennweite
 Die Standardabweichung des Mittelwertes berechnet sich dabei nach
 
 \begin{equation}
+  \label{eqn:mittel}
   \Delta f_\text{Mittel} = \sqrt{ \frac{1}{N(N-1)} \sum^N_{i=1} (f_i - f_\text{Mittel})^2 }.
 \end{equation}
 
@@ -117,3 +118,11 @@ Mittels des Python 3.7.0 Paketes Curve Fit werden die Koeffizienten wie folgt be
   h  &= (-1,7 \pm 0,4) \, \symup{cm}\\
   h' &= (7 \pm 1) \, \symup{cm}
 \end{align*}
+
+Der Mittelwert für die Brennweite beträgt Damit
+
+\begin{center}
+  $f_\text{Mittel} = (18,5 \pm 3)$ cm.
+\end{center}
+
+Dabei wird der Fehler wie zuvor bereits nach \eqref{eqn:mittel} bestimmt.
