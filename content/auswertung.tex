@@ -10,14 +10,14 @@ Dabei ist $V_1 = \frac{B}{G}$ und $V_2 = \frac{b}{g}$.
 
 \input{../content/schnittpunkt.tex}
 
-Der mittlere Abweichung der Differenzen von $V_1$ und $V_2$ ergibt sich zu
+Die mittlere Abweichung der Differenzen von $V_1$ und $V_2$ ergibt sich zu
 
 \begin{center}
     $\overline{\Delta V} = \frac{1}{N} \sum^N_{i=1} \frac{| V_{1,i} - V_{2,i} |}{V_{1,i}} = (4,8 \pm 0,4) \, \%$.
 \end{center}
 
-Die Brennweite der Linse kann einerseits bestimmt werden, in dem die Werte aus \autoref{tab:schnittpunkt} gemittelt werden.
-Andererseits können die $b_i$ auf die $y$-Achse und die $g_i$ auf die $x$-Achse gelegt werden. Anschließend werden die jeweiligen Wertepaare mit einer Gerade verbunden.
+Die Brennweite der Linse kann einerseits bestimmt werden, indem über die Werte aus \autoref{tab:schnittpunkt} gemittelt wird.
+Andererseits können die $b_i$ auf die $y$-Achse und die $g_i$ auf die $x$-Achse gelegt werden. Anschließend werden die jeweiligen Wertepaare mit einer Geraden verbunden.
 Der Schnittpunkt dieser entspricht dann der Brennweite.
 Der so entstehende Plot ist in \autoref{fig:schnittpunkt} und \autoref{fig:schnittpunkt-zoom} zu sehen.
 
@@ -46,14 +46,18 @@ Die Standardabweichung des Mittelwertes berechnet sich dabei nach
 
 \begin{equation}
   \label{eqn:mittel}
-  \Delta f_\text{Mittel} = \sqrt{ \frac{1}{N(N-1)} \sum^N_{i=1} (f_i - f_\text{Mittel})^2 }.
+  \Delta f_\text{Mittel} = \sqrt{ \frac{1}{N(N-1)} \sum^N_{i=1} (f_i - f_\text{Mittel})^2 }
 \end{equation}
+
+und die Abweichung des abgelesenen Wertes wird aus der Genauigkeit des Plots genommen.
+
+
 
 \subsection{Bestimmung der Brennweite einer Linse nach der Methode von Bessel}
 
 %TODO: Gleichung
 Zur Bestimmung der Brennweite nach Bessel werden die Daten in \autoref{tab:bessel} verwendet.
-Die Brennweiten $f_i$, welche zusätzlich zu den Messwerten in der Tabelle befinden, berechnen sich dabei nach GLEICHUNG.
+Die Brennweiten $f_i$, welche sich zusätzlich zu den Messwerten in der Tabelle befinden, berechnen sich dabei nach GLEICHUNG.
 Zur Berechnung von $d$ wird der Mittelwert aus $b_1$ und $g_2$ beziehungsweise jener aus $b_2$ und $g_1$ verwendet.
 
 \input{../content/bessel.tex}
@@ -71,7 +75,7 @@ Diese finden sich in \autoref{tab:bessel-rot} und \autoref{tab:bessel-blau}.
 
 \input{../content/bessel-blau.tex}
 
-Gemittelt ergeben sich die Brennweiten als
+Gemittelt ergeben sich die Brennweiten zu
 
 \begin{align*}
   f_\text{Rot} &=  (9,913 \pm 0,009) \, \symup{cm}\\
@@ -94,7 +98,7 @@ Durch die Daten werden entsprechend Ausgleichsgeraden der Form
 \end{align}
 
 gelegt. Dabei sind $h$ und $h'$ die Verschiebungen der Hauptebenen $H$ beziehungsweise $H'$ von dem gewählten Referenzpunkt $A$.
-Die entsprechenden Plots sind in \autoref{fig:fig:abbe-b} uund \autoref{fig:abbe-b} zu finden.
+Die entsprechenden Plots sind in \autoref{fig:abbe-b} und \autoref{fig:abbe-g} zu finden.
 
 \begin{figure}
   \centering
@@ -116,10 +120,10 @@ Mittels des Python 3.7.0 Paketes Curve Fit werden die Koeffizienten wie folgt be
   f_\text{g} &= (14,6 \pm 0,2) \, \symup{cm}\\
   f_\text{b} &= (21,7 \pm 0,5) \, \symup{cm}\\
   h  &= (-1,7 \pm 0,4) \, \symup{cm}\\
-  h' &= (7 \pm 1) \, \symup{cm}
+  h' &= (7 \pm 1) \, \symup{cm}.
 \end{align*}
 
-Der Mittelwert für die Brennweite beträgt Damit
+Der Mittelwert für die Brennweite beträgt damit
 
 \begin{center}
   $f_\text{Mittel} = (18,5 \pm 3)$ cm.
